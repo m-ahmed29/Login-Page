@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
         home: Scaffold(
             appBar: AppBar(
               title: Center(
-                child: Text('Flutter Login Page'),
+                child: Text('Login Page'),
               ),
             ),
             body: Center(
@@ -27,10 +27,25 @@ class MyApp extends StatelessWidget {
                   child: TextField(
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
+                        prefixIcon: Icon(Icons.accessibility_new_rounded),
+                        border: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10))),
+                        hintText: "User Name"),
+                  ),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                Container(
+                  width: 300,
+                  child: TextField(
+                    keyboardType: TextInputType.emailAddress,
+                    decoration: InputDecoration(
                         prefixIcon: Icon(Icons.email),
                         border: OutlineInputBorder(
                             borderRadius:
-                                BorderRadius.all(Radius.circular(30))),
+                                BorderRadius.all(Radius.circular(10))),
                         hintText: "Email"),
                   ),
                 ),
@@ -46,7 +61,7 @@ class MyApp extends StatelessWidget {
                         prefixIcon: Icon(Icons.lock),
                         border: OutlineInputBorder(
                             borderRadius:
-                                BorderRadius.all(Radius.circular(30))),
+                                BorderRadius.all(Radius.circular(10))),
                         hintText: "Password"),
                   ),
                 ),
