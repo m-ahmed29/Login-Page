@@ -11,13 +11,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-            appBar: AppBar(
-              title: Center(
-                child: Text('Login Page'),
-              ),
+          appBar: AppBar(
+            backgroundColor: Colors.green[200],
+            title: Center(
+              child: Text('Login Page'),
             ),
-            body: Center(
-                child: Column(
+          ),
+          body: Center(
+            child: Column(
               children: [
                 SizedBox(
                   height: 50,
@@ -27,25 +28,10 @@ class MyApp extends StatelessWidget {
                   child: TextField(
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.accessibility_new_rounded),
-                        border: OutlineInputBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10))),
-                        hintText: "User Name"),
-                  ),
-                ),
-                SizedBox(
-                  height: 30,
-                ),
-                Container(
-                  width: 300,
-                  child: TextField(
-                    keyboardType: TextInputType.emailAddress,
-                    decoration: InputDecoration(
                         prefixIcon: Icon(Icons.email),
                         border: OutlineInputBorder(
                             borderRadius:
-                                BorderRadius.all(Radius.circular(10))),
+                                BorderRadius.all(Radius.circular(20))),
                         hintText: "Email"),
                   ),
                 ),
@@ -61,15 +47,37 @@ class MyApp extends StatelessWidget {
                         prefixIcon: Icon(Icons.lock),
                         border: OutlineInputBorder(
                             borderRadius:
-                                BorderRadius.all(Radius.circular(10))),
+                                BorderRadius.all(Radius.circular(20))),
                         hintText: "Password"),
                   ),
                 ),
                 SizedBox(
                   height: 30,
                 ),
-                ElevatedButton(onPressed: () {}, child: Text('Login'))
+                Container(
+                  width: 300,
+                  child: TextField(
+                    obscureText: true,
+                    keyboardType: TextInputType.emailAddress,
+                    decoration: InputDecoration(
+                        prefixIcon: Icon(Icons.lock),
+                        border: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(20))),
+                        hintText: " Conform Password"),
+                  ),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                FlatButton(
+                    color: Colors.green[200],
+                    onPressed: () {},
+                    child: Text('Login'))
               ],
-            ))));
+            ),
+          ),
+          backgroundColor: Colors.lime[50],
+        ));
   }
 }
